@@ -14,9 +14,9 @@ public class PaqueteDao {
 		
 
 	public boolean  insert(EnvioPaquetes paquete) throws Exception{
-		String sql = " INSERT INTO EnvioPaquetes (nombre, apellido, direccionDestinatario, direccionRemitente)" 
-				   + " VALUES (?, ?, ?, ?)";
-					
+		String sql = " INSERT INTO enviopaquetes (id,nombre, apellido, direccionDestinatario, direccionRemitente)" 
+				   + " VALUES (?, ?, ?, ?, ?)";
+		
 					PreparedStatement ps = con.prepareStatement(sql);
 					
 					ps.setString(1, paquete.getNombre());

@@ -19,15 +19,13 @@ public class GestionPaqueteON implements GestionPaqueteONRemote{
 	
 	public boolean registrarCliente(EnvioPaquetes paquetes) throws Exception {
 		
-		if(paquetes.getNombre().length()!=10)
-			throw new Exception("Cedula Incorrecta ccccc");
 		
 		 try {
 			 paquetedao.insert(paquetes);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw new Exception("Error al registrar");
+			throw new Exception("guardado");
 		}
 		return true;
 		
